@@ -1,0 +1,29 @@
+{
+  "name": "MyHANAApp",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4",
+    "@sap/cds-hana": "^2"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "build": {
+      "target": "."
+    },
+    "hana": {
+      "deploy format": "hdtable"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana"
+      }
+    }
+  }
+}
